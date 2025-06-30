@@ -81,6 +81,11 @@ public class AuthenticationController : ControllerBase
         {
             return new UserData(2, "Huy", "Nguyen", data.UserName!);
         }
+        if (CompareValues(data.UserName, "dpatel") &&
+            CompareValues(data.Password, "StrongPassword"))
+        {
+            return new UserData(2, "Dharmesh", "Patel", data.UserName!);
+        }
         return null;
     }
 
